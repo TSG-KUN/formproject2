@@ -187,30 +187,28 @@ class FormController extends Controller
 
     //         Form::create($validatedData);
     //         return redirect('/home');
-    // }
-
+    // 
         $Form = new Form;
-        $Form->email = $data->email        ;                                                                       
-        $Form->nama = $data->nama         ;                                                                       
-        $Form->nip = $data->nip          ;                                                                       
-        $Form->jenisgratif =$data->jenisgratif  ;                                                                       
-        $Form->desksingkat   = $data->desksingkat  ;                                                                       
-        $Form->perkirharga   = $data->perkirharga  ;                                                                       
-        $Form->perispeneri   = $data->perispeneri  ;                                                                       
-        $Form->tglpemberi    = $data->tglpemberi   ;                                                                       
-        $Form->lokasipemberi = $data->lokasipemberi;                                                                       
-        $Form->pemberigratif = $data->pemberigratif;                                                                       
-        $Form->image         = $data->image;   
-        $Form->namalengkap  = $data->namalengkap ;                                                                    
-        $Form->nip1         = $data->nip1        ;                                                                    
-        $Form->jabatan      = $data->jabatan     ;                                                                    
-        $Form->pangkat      = $data->pangkat     ;                                                                    
-        $Form->bagian       = $data->bagian      ;                                                                    
-        $Form->namalengkap1 = $data->namalengkap1;                                                                    
-        $Form->jabatan1     = $data->jabatan1    ;                                                                    
-        $Form->pangkat1     = $data->pangkat1    ;                                                                    
-        $Form->bagian1      = $data->bagian1     ;                                                                    
-        $Form->bentukpoten  = $data->bentukpoten ;                                                                    
+        $Form->email = $data->email;
+        $Form->nama = $data->nama;
+        $Form->nip = $data->nip;
+        $Form->jenisgratif = $data->jenisgratif;
+        $Form->desksingkat = $data->desksingkat;
+        $Form->perkirharga = $data->perkirharga;
+        $Form->perispeneri = $data->perispeneri;
+        $Form->tglpemberi = $data->tglpemberi;
+        $Form->lokasipember = $data->lokasipemberi;
+        $Form->pemberigratif = $data->pemberigratif;
+        $Form->namalengkap = $data->namalengkap;
+        $Form->nip1 = $data->nip1;
+        $Form->jabatan = $data->jabatan;
+        $Form->pangkat = $data->pangkat;
+        $Form->bagian = $data->bagian;
+        $Form->namalengkap1 = $data->namalengkap1;
+        $Form->jabatan1 = $data->jabatan1;
+        $Form->pangkat1 = $data->pangkat1;
+        $Form->bagian1 = $data->bagian1;
+        $Form->bentukpoten = $data->bentukpoten;
         $Form->save();
         // if($request->file('image'))
         // {
