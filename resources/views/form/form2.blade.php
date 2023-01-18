@@ -15,6 +15,7 @@
     font-weight: bolder;
   }
 </style>
+<div class="container mt-2">
 <div class="mt-4 mb-3 f">
     <u><b>Menu Surat Pernyataan</b></u>
   </div>
@@ -118,5 +119,9 @@
         </div>
     </fieldset>
     <button type="submit" class="btn btn-primary"> Kirim </button>
-    <a type="submit" class="btn btn-danger" href="/home"> Batal </a> 
-    </form>
+    <a type="submit" class="btn btn-danger" href="/form-1"> Batal </a> 
+</form>
+</div>
+<div class="container text-center">
+    <small> 2023-2024 | Made with <i class="bi bi-heart-fill"></i> by Yui </small>
+  </div>

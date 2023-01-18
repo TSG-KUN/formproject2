@@ -153,9 +153,9 @@
             <div class="row w-25 mx-1">
             <input class="form-control" type="text" name="pemberigratif">
             </div>
-            <div class="row mt-2">
+            {{-- <div class="row mt-2">
               <b> Lampirkan Bukti </b>
-            </div>
+            </div> --}}
             {{-- <div class="row">
               <div class="col-md-9">
                 <input class="form-control" type="text" readonly>
@@ -163,7 +163,12 @@
                 <input class="form-control" type="file" id="image" name="image"/>
               </div>
             </div> --}}
-            <button type="submit" class="btn btn-primary"> Kirim </button>
-            <a type="submit" class="btn btn-danger" href="/home"> Batal </a> 
+            <div class="row w-25 mx-1 mt-2">
+            <button type="submit" class="btn btn-primary w-50"> Selanjutnya </button>
+            <a type="submit" class="btn btn-danger w-25 mx-2" href="/home"> Batal </a> 
+            </div>
     </fieldset>
     </form>
+    <div class="container text-center">
+        <small> 2023-2024 | Made with <i class="bi bi-heart-fill"></i> by Yui </small>
+      </div>
