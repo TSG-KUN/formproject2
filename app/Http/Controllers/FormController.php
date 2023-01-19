@@ -126,7 +126,7 @@ class FormController extends Controller
             'jenisgratif'   => $request->jenisgratif,
             'desksingkat'   => $request->desksingkat,
             'perkirharga'   => $request->perkirharga,
-            'perispeneri'   => $request->perispenerima,
+            'perispeneri'   => $request->perispeneri,
             'tglpemberi'    => $request->tglpemberi,
             'lokasipemberi' => $request->lokasipemberi,
             'pemberigratif' => $request->pemberigratif,
@@ -140,48 +140,59 @@ class FormController extends Controller
     }
     
     public function Page2Proses(Request $request) {
-        $data = [
-            'namalengkap'   => $request->namalengkap,
-            'nip1'          => $request->nip1,
-            'jabatan'       => $request->jabatan,
-            'pangkat'       => $request->pangkat,
-            'bagian'        => $request->bagian,
-            'namalengkap1'  => $request->namalengkap1,
-            'jabatan1'      => $request->jabatan1,
-            'pangkat1'      => $request->pangkat1,
-            'bagian1'       => $request->bagian1,
-            'bentukpoten'   =>$request->bentukpoten
-        ];
+        // data yang ini ngak usah dikasi masuk dalam variabel
+        // 'namalengkap'   => $request->namalengkap,
+        // 'nip1'          => $request->nip1,
+        // 'jabatan'       => $request->jabatan,
+        // 'pangkat'       => $request->pangkat,
+        // 'bagian'        => $request->bagian,
+        // 'namalengkap1'  => $request->namalengkap1,
+        // 'jabatan1'      => $request->jabatan1,
+        // 'pangkat1'      => $request->pangkat1,
+        // 'bagian1'       => $request->bagian1,
+        // 'bentukpoten'   =>$request->bentukpoten
         
-        session()->put('session-page', $data);
+        //jadi ngak usah dimasukin dalam session lagi 
         $data = session()->get('session-page');
         
         $Form = new Form;
-        $Form->email = $data->email;
-        $Form->nama = $data->nama;
-        $Form->nip = $data->nip;
-        $Form->jenisgratif = $data->jenisgratif;
-        $Form->desksingkat = $data->desksingkat;
-        $Form->perkirharga = $data->perkirharga;
-        $Form->perispeneri = $data->perispeneri;
-        $Form->tglpemberi = $data->tglpemberi;
-        $Form->lokasipember = $data->lokasipemberi;
-        $Form->pemberigratif = $data->pemberigratif;
-        $Form->namalengkap = $data->namalengkap;
-        $Form->nip1 = $data->nip1;
-        $Form->jabatan = $data->jabatan;
-        $Form->pangkat = $data->pangkat;
-        $Form->bagian = $data->bagian;
-        $Form->namalengkap1 = $data->namalengkap1;
-        $Form->jabatan1 = $data->jabatan1;
-        $Form->pangkat1 = $data->pangkat1;
-        $Form->bagian1 = $data->bagian1;
-        $Form->bentukpoten = $data->bentukpoten;
+
+        //yang ini tinggal ambil dari session
+        //ini tadi error array email ngak kedapat gegara
+        //sesion yang sebelumnya kamu timpa jadi ngak ada
+        //nah kan udah ngak ada jadi coba tes lagi
+        //ok thx kak
+
+        $Form->email = $data['email'];
+        $Form->nama = $data['nama'];
+        $Form->nip = $data['nip'];
+        $Form->jenisgratif = $data['jenisgratif'];
+        $Form->desksingkat = $data['desksingkat'];
+        $Form->perkirharga = $data['perkirharga'];
+        $Form->perispeneri = $data['perispeneri'];
+        $Form->tglpemberi = $data['tglpemberi'];
+        $Form->lokasipemberi = $data['lokasipemberi'];
+        $Form->pemberigratif = $data['pemberigratif'];
+        //ngantuk gw
+
+        //jadi ini tinggal ambil dari request
+        $Form->namalengkap = $request->namalengkap;
+        $Form->nip1 = $request->nip1;
+        $Form->jabatan = $request->jabatan;
+        $Form->pangkat = $request->pangkat;
+        $Form->bagian = $request->bagian;
+        $Form->namalengkap1 = $request->namalengkap1;
+        $Form->jabatan1 = $request->jabatan1;
+        $Form->pangkat1 = $request->pangkat1;
+        $Form->bagian1 = $request->bagian1;
+        $Form->bentukpoten = $request->bentukpoten;
         $Form->save();
         // if($request->file('image'))
         // {
         //     $validatedData['image'] = $request->file('image')->store('file-images');
         // }
+
+        return redirect('/home');
     }
 }
     
