@@ -155,39 +155,7 @@ class FormController extends Controller
         
         session()->put('session-page', $data);
         $data = session()->get('session-page');
-
-    //         $validatedData = $request->validate([
-    //         'email' => 'email:dns',
-    //         'nama' => '',
-    //         'nip' => '',
-    //         'jenisgratif' => '',
-    //         'desksingkat' => '',
-    //         'perkirharga' => '',
-    //         'perispeneri' => '',
-    //         'tglpemberi' => '',
-    //         'lokasipemberi' => '',
-    //         'pemberigratif' => '',
-    //         'image' => '',
-    //         'namalengkap' => '',
-    //         'nip1' => '',
-    //         'jabatan' => '',
-    //         'pangkat' => '',
-    //         'bagian' => '',
-    //         'namalengkap1' => '',
-    //         'jabatan1' => '',
-    //         'pangkat1' => '',
-    //         'bagian1' => '',
-    //         'bentukpoten' => ''
-    //     ]);
-
-    //         if($request->file('image'))
-    //         {
-    //             $validatedData['image'] = $request->file('image')->store('file-images');
-    //         }
-
-    //         Form::create($validatedData);
-    //         return redirect('/home');
-    // 
+        
         $Form = new Form;
         $Form->email = $data->email;
         $Form->nama = $data->nama;
