@@ -38,7 +38,9 @@ return new class extends Migration
                 'pelayanan',
                 'nonpelayanan',
                 'seminar'
-            ]);
+            ]); //inputannya harus itu ngak boleh yang lain
+
+            
             $table->date('tglpemberi');
             $table->string('lokasipemberi');
             $table->string('pemberigratif');
